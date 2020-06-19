@@ -37,3 +37,17 @@ function saveToDos() {
 
 // 로컬 스터리지에 가져오기
 const parsedToDos = JSON.parse(loadedToDos)
+
+//삭제 로직
+function deleteToDo(event) {
+    const btn = event.target
+    const li = btn.parentNode
+    toDoList.removeChild(li)
+  
+    toDos = toDos.filter(todo => todo.id !== parseInt(li.id))
+    saveToDos();
+  
+  }
+
+//랜덤 넘버 생성
+  Math.floor(Math.random() * IMG_NUMBER)

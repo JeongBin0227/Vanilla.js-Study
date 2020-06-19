@@ -15,7 +15,7 @@ function handleSubmit(event) {
   paintGreeting(currentValue)
   saveName(currentValue)
 }
-
+ 
 function askForName() {
   form.classList.add(SHOWING_CN)
   form.addEventListener("submit",handleSubmit)
