@@ -1,0 +1,15 @@
+.todoList{
+    width:50%; 
+    height:500px;
+    float:left;
+    background-color: black;
+}
+.select-week{
+    color:#edc70a;
+}
+.select-day{
+    color:#edc70a;
+}
+.todo{
+    color:#edc70a;
+}
