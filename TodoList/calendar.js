@@ -16,6 +16,7 @@ let monthDay = 0
 
 
 const monthEng = ['January','Feburary','March','April','May','June','July','August','September','October','November','December']
+const weekEng = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 const leapYear=[31,29,31,30,31,30,31,31,30,31,30,31];
 const notLeapYear=[31,28,31,30,31,30,31,31,30,31,30,31];
 
@@ -70,7 +71,7 @@ function showCalendar(year,month){
             for(let i=0;i<7;i++){
                 if(startWeek>i) body += `<td align="center"></td>`
                 else{
-                    body += `<td id = ${k} align="center">${k}</td>`
+                    body += `<td id = ${k} onclick="clickDay(this.id)" class="${weekEng[i]}"align="center">${k}</td>`
                     k++
                 }
             }
@@ -78,7 +79,7 @@ function showCalendar(year,month){
         }
         else{
             for(let i=0;i<7;i++){
-                body += `<td id = ${k} onclick="clickDay(this.id)" align="center">${k}</td>`
+                body += `<td id = ${k} onclick="clickDay(this.id)" class="${weekEng[i]}" align="center">${k}</td>`
                 k++
                 if(k===monthDay+1) break
             }
@@ -98,7 +99,9 @@ function clickDay(e){
         const day =document.getElementById(`${i}`);
 
         if(i===Number(e)){
+            setTodoListDate(day.id,day.className)
             day.classList.add('toggle')
+
         }
         else{
             day.classList.remove('toggle')
