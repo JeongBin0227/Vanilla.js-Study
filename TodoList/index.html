@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="./calendar.css">
+    <link rel="stylesheet" type="text/css" href="./todoList.css">
     <title> Todo List With Canlender </title>
 </head>
 <body>
@@ -12,8 +13,20 @@
         <h1>검색바</h1>
     </div>
     <div>
-        <div class="left">
-            <h1>Todolist</h1>
+        <div class="todoList">
+            <div>
+                <h3 class="select-week"></h1>
+                <h1 class="select-day"></h1>
+            </div>
+            <div class="todo">
+                <h2 class="select-day">Todo List</h2>
+                <form>
+                    <input id="todo-input"/>
+                    <button class="add"> 제출 </button>
+                </form>
+                <ul id="todo-list">
+                </ul>
+            </div>
         </div>
         <div class="calendar">
             <table id="calendar" align="center">
@@ -55,5 +68,6 @@
         <h1>기타정보</h1>
     </div>
 </body>
-<script src="./calendar.js"></script>
+<script type="text/javascript" src="./todoList.js"></script>
+<script type="text/javascript" src="./calendar.js"></script>
 </html>
