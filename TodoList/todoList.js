@@ -122,12 +122,14 @@ const createToDo = (todo,id) => {
 //투두리스트 추가 눌렀을 때
 const onSubmit = e => {
   e.preventDefault()
-  let currentId = ''
-  currentId = year.innerHTML+(changeMonth+1)+selectWeek.innerHTML
+  if(todoInput.value.length!==0){
+    let currentId = ''
+    currentId = year.innerHTML+(changeMonth+1)+selectWeek.innerHTML
 
-  currentTodo = currentId
-  reducer(['ADD_TODO',todoInput.value,currentId])
-  todoInput.value=''
+    currentTodo = currentId
+    reducer(['ADD_TODO',todoInput.value,currentId])
+    todoInput.value=''
+  }
 }
 
 form.addEventListener("submit",onSubmit)
