@@ -109,6 +109,7 @@ const createToDo = (todo,id) => {
   //todo 삭제
   const button = document.createElement('button')
   button.innerHTML = '삭제'
+  button.classList.add('delete')
   button.addEventListener("click",function(){
     reducer(['DELETE_TODO',this.parentElement.id])
   })
