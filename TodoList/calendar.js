@@ -99,7 +99,7 @@ function clickDay(e){
         const day =document.getElementById(`${i}`);
 
         if(i===Number(e)){
-            setTodoListDate(day.id,day.className)
+            setTodoListDate(day.id,day.className.replace('toggle',''))
             day.classList.add('toggle')
 
         }
