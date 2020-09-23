@@ -6,66 +6,68 @@
     <title> Todo List With Canlender </title>
 </head>
 <body>
-    <div class="title">
-        <h1>제목</h1>
-    </div>
-    <div class="top">
-        <h1>검색바</h1>
-    </div>
-    <div>
-        <div class="todoList">
-            <div>
-                <h3 class="select-week"></h1>
-                <h1 class="select-day"></h1>
+    <div class="container">
+        <div class="title">
+            <h1>제목</h1>
+        </div>
+        <div class="top">
+            <h1>검색바</h1>
+        </div>
+        <div class="content">
+            <div class="todoList">
+                <div>
+                    <h3 class="select-week"></h1>
+                    <h1 class="select-day"></h1>
+                </div>
+                <div class="todo">
+                    <h2 class="select-day">Todo List</h2>
+                    <form>
+                        <input id="todo-input"/>
+                        <button class="add"> 제출 </button>
+                    </form>
+                    <ul id="todo-list">
+                    </ul>
+                </div>
             </div>
-            <div class="todo">
-                <h2 class="select-day">Todo List</h2>
-                <form>
-                    <input id="todo-input"/>
-                    <button class="add"> 제출 </button>
-                </form>
-                <ul id="todo-list">
-                </ul>
+            <div class="calendar">
+                <table id="calendar" align="center">
+                    <thead>
+                    <tr class="btn-wrap clearfix">
+                        <td>
+                        <label id="prev">
+                            <
+                        </label>
+                        </td>
+                        <td align="center" id="current-year-month" colspan="5">
+                            <label id="month">
+                            </label>
+                            <label id="year">
+                            </label>
+                        </td>
+                        <td>
+                        <label id="next">
+                            >
+                        </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "sun" align="center">Sun</td>
+                        <td align="center">Mon</td>
+                        <td align="center">Tue</td>
+                        <td align="center">Wed</td>
+                        <td align="center">Thu</td>
+                        <td align="center">Fri</td>
+                        <td class= "sat" align="center">Sat</td>
+                    </tr>
+                    </thead>
+                    <tbody id="calendar-body" class="calendar-body">
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="calendar">
-            <table id="calendar" align="center">
-                <thead>
-                  <tr class="btn-wrap clearfix">
-                    <td>
-                      <label id="prev">
-                          <
-                      </label>
-                    </td>
-                    <td align="center" id="current-year-month" colspan="5">
-                        <label id="month">
-                        </label>
-                        <label id="year">
-                        </label>
-                    </td>
-                    <td>
-                      <label id="next">
-                          >
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                      <td class = "sun" align="center">Sun</td>
-                      <td align="center">Mon</td>
-                      <td align="center">Tue</td>
-                      <td align="center">Wed</td>
-                      <td align="center">Thu</td>
-                      <td align="center">Fri</td>
-                      <td class= "sat" align="center">Sat</td>
-                  </tr>
-                </thead>
-                <tbody id="calendar-body" class="calendar-body">
-                </tbody>
-              </table>
+        <div class="footer">
+            <h1>기타정보</h1>
         </div>
-    </div>
-    <div class="footer">
-        <h1>기타정보</h1>
     </div>
 </body>
 <script type="text/javascript" src="./todoList.js"></script>
