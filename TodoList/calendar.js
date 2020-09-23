@@ -108,3 +108,5 @@ function clickDay(e){
         }
     }
 }
+
+clickDay(currentDay)

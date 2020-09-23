@@ -7,7 +7,6 @@ function setTodoListDate(day,week){
     selectWeek.innerHTML = day
     selectDay.innerHTML = week
     currentTodo = year.innerHTML+(changeMonth+1)+selectWeek.innerHTML
-    console.log(currentTodo)
     paintToDos()
 }
 
