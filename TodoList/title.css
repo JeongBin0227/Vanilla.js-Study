@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+}
+.title {
+    transition: all  0.5s ease-in-out color transform 0.2s ease;
+    opacity: 1;
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: #212121;
+    text-align: center;
+    line-height: 8rem;
+}
+.title .before-load {
+      top: 0rem;
+      opacity: 0;
+}
+.title:hover {
+      color:#616161;
+      transform: scale(1.03);
+}
+.description {
+    transition: opacity 1.2s ease  0.5s color ease 0.5s;
+    font-size: 2rem;
+    color: #ffb6b9;
+    text-align: center;
+    margin-top: 95px;
+}
+
+.description .before-load {
+    opacity: 0;
+}
+
+.description :hover {
+    color: #fd9b9f;
+}

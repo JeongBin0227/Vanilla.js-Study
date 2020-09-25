@@ -1,8 +1,8 @@
 .title{
-    width:100%; 
+    width:25%; 
     height:100px;
     float:left;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 .top{
     width:100%; 
