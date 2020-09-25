@@ -13,7 +13,7 @@ function setTodoListDate(day,week){
 // const plusButton =document.getElementById('add');
 const todoInput =document.getElementById('todo-input');
 const todoLists =document.getElementById('todo-list');
-const form =document.querySelector('form')
+const form =document.querySelector('.todoForm')
 
 
 // posts : {
