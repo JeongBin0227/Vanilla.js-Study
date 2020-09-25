@@ -31,8 +31,8 @@ prev.addEventListener('click',()=>{
     }
     else changeMonth -= 1
 
-    month.innerHTML =  `${monthEng[changeMonth]}`
-    year.innerHTML =  `${changeYear}`
+    // month.innerHTML =  `${monthEng[changeMonth]}`
+    // year.innerHTML =  `${changeYear}`
     showCalendar(changeYear,changeMonth)
 })
 
@@ -49,6 +49,8 @@ next.addEventListener('click',()=>{
 
 function showCalendar(year,month){
     let leap = false
+    this.month.innerHTML =  monthEng[month]
+    this.year.innerHTML =  year
     if(month===1){
         leap=leapCheck(year)
     }
