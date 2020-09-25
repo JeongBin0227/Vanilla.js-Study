@@ -6,7 +6,12 @@ let currentTodo = 2
 function setTodoListDate(day,week){
     selectWeek.innerHTML = day
     selectDay.innerHTML = week
-    currentTodo = year.innerHTML+(changeMonth+1)+selectWeek.innerHTML
+    if((changeMonth+1)>10) currentTodo = year.innerHTML+(changeMonth+1)
+    else currentTodo = year.innerHTML+0+(changeMonth+1)
+
+    if(selectWeek.innerHTML>10) currentTodo+= selectWeek.innerHTML
+    else currentTodo+= 0+selectWeek.innerHTML
+    
     paintToDos()
 }
 
@@ -35,7 +40,7 @@ const form =document.querySelector('.todoForm')
 // },
 
 let todos = {
-    2020915:{
+    20200915:{
       '강의듣기':{
         id:1,
         isDone:false,
@@ -123,7 +128,11 @@ const onSubmit = e => {
   e.preventDefault()
   if(todoInput.value.length!==0){
     let currentId = ''
-    currentId = year.innerHTML+(changeMonth+1)+selectWeek.innerHTML
+    if((changeMonth+1)>10) currentId = year.innerHTML+(changeMonth+1)
+    else currentId = year.innerHTML+0+(changeMonth+1)
+
+    if(selectWeek.innerHTML>10) currentId+= selectWeek.innerHTML
+    else currentId+= 0+selectWeek.innerHTML
 
     currentTodo = currentId
     reducer(['ADD_TODO',todoInput.value,currentId])
