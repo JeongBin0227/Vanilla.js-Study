@@ -5,14 +5,9 @@ const creatWord = (todo,date) => {
     const li = document.createElement('li')
 
     const year = date.slice(0,4)
-    const month = date.slice(4,5)
-    const day = date.slice(6,7)
+    const month = date.slice(4,6)
+    const day = date.slice(6,8)
     
-    console.log(date)
-    console.log(year)
-    console.log(month)
-    console.log(day)
-
     li.classList.add('autoComplete_result_item')
     li.innerHTML=todo
     li.innerHTML += ' : ' + year + '년 ' + month + '월 ' + day + '일'
@@ -56,8 +51,16 @@ const autoCompleteNotVisible = () =>{
 
 const clickTodoResult = e => {
     console.log(e.target.innerHTML)
+    const date = e.target.innerHTML.split(':')[1]
+    const year = date.slice(1,5)
+    const month = date.slice(7,9)
+    const day = date.slice(11,13)
+
+    if(month.split('')[0]===0) month=month.split('')[1]
+    showCalendar(year,month-1)
+    clickDay(day)
+    
 }
 autoCompleteInput.addEventListener('keyup', e => doByInputKeyUp(e));
 autoComplete.addEventListener('click',clickTodoResult)
-// console.log('a',createWord('강의'))
 
