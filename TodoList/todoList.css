@@ -54,7 +54,7 @@
     -moz-appearance: none; 
     appearance: none;
   }
-  .add, .delete{
+  .add, .delete, .searchButton{
     cursor: pointer;
     font-size: 10px;
     padding: 10px;
