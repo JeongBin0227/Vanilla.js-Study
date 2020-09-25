@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./calendar.css">
     <link rel="stylesheet" type="text/css" href="./todoList.css">
+    <link rel="stylesheet" type="text/css" href="./search.css">
     <title> Todo List With Canlender </title>
 </head>
 <body>
@@ -11,7 +12,15 @@
             <h1>제목</h1>
         </div>
         <div class="top">
-            <h1>검색바</h1>
+            <div class="autoComplete">
+                <form>
+                    <input class="autoComplete_input" id="autoComplete" type="text" tabindex="1">
+                    <button class="searchButton"> 검색하기 </button>
+                </form>
+                <ul class="autoComplete_result" style="display: none">
+                </ul>
+                
+            </div>
         </div>
         <div class="content">
             <div class="todoList">
@@ -21,7 +30,7 @@
                 </div>
                 <div class="todo">
                     <div class="todo-title">Todo List</div>
-                    <form>
+                    <form class="todoForm">
                         <input id="todo-input"/>
                         <button class="add"> 제출하기 </button>
                     </form>
@@ -65,11 +74,9 @@
                 </table>
             </div>
         </div>
-        <div class="footer">
-            <h1>기타정보</h1>
-        </div>
     </div>
 </body>
 <script type="text/javascript" src="./todoList.js"></script>
 <script type="text/javascript" src="./calendar.js"></script>
+<script type="text/javascript" src="./search.js"></script>
 </html>
