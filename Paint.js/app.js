@@ -4,6 +4,9 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+let initialX = 0
+let initialY = 0
+
 
 const INITIAL_COLOR = "#2c2c2c";
 const CANVAS_SIZE = 700;
@@ -24,19 +27,27 @@ function stopPainting() {
   painting = false;
 }
 
-function startPainting() {
+function startPainting(event) {
+  initialX = event.offsetX;
+  initialY = event.offsetY;
   painting = true;
 }
 
 function onMouseMove(event) {
   const x = event.offsetX;
   const y = event.offsetY;
+  console.log(initialX)
+  console.log(initialY)
+  console.log(x)
+  console.log(y)
   if (!painting) {
     ctx.beginPath();
     ctx.moveTo(x, y);
   } else {
-    ctx.lineTo(x, y);
-    ctx.stroke();
+    // ctx.lineTo(x, y);
+    // ctx.stroke();
+    ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    ctx.fillRect (initialX, initialY, x-initialX, y-initialY);
   }
 }
 
@@ -63,7 +74,8 @@ function handleModeClick() {
 
 function handleCanvasClick() {
   if (filling) {
-    ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    // ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    // ctx.fillRect (10, 10, 50, 50);
   }
 }
 
