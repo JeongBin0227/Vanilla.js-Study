@@ -12,55 +12,51 @@ function QuizPage() {
     this.quizList = [
       {
         id: 1,
-        question: "dasdas",
+        question: "스벨트는 가상돔을 사용한다.",
         examples: [
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "YES",
+            is_answer: false,
           },
           {
-            title: "dasdad",
-            is_answer: "dsadas",
-          },
-          {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "NO",
+            is_answer: true,
           },
         ],
       },
       {
         id: 2,
-        question: "zzzzzzz",
+        question: "스벨트의 스토어에서 가져온 데이터를 사용 하는 방법은?",
         examples: [
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{data}",
+            is_answer: false,
           },
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{$data}",
+            is_answer: true,
           },
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{#data}",
+            is_answer: false,
           },
         ],
       },
       {
         id: 3,
-        question: "pppppdsadpasdas",
+        question: "스벨트에서 분기를 사용하는 방법은?",
         examples: [
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{#if ~~~ }",
+            is_answer: true,
           },
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{$if ~~~ }",
+            is_answer: false,
           },
           {
-            title: "dasdad",
-            is_answer: "dsadas",
+            title: "{if ~~~ }",
+            is_answer: false,
           },
         ],
       },
