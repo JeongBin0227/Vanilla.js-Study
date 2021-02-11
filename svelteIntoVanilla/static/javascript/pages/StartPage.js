@@ -7,7 +7,7 @@ function StartPage() {
   this.setElements = () => {
     this.template = /*html*/ `
       <div id="start-page">
-        <h1 class="title">🎊 Welcome To JavaScript Test ✍️</h1>
+        <h1 class="title">🎊 Welcome To Svelte Test ✍️</h1>
         <button class="start-btn">START</button>
       </div>
     `;
