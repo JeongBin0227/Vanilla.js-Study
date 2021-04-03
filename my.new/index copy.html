@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+    ███╗   ███╗██╗   ██╗███╗   ██╗███████╗██╗    ██╗    ██╗ █████╗ ███╗   ██╗██╗   ██╗████████╗██╗  ██╗██╗███╗   ██╗ ██████╗ 
+    ████╗ ████║╚██╗ ██╔╝████╗  ██║██╔════╝██║    ██║   ██╔╝██╔══██╗████╗  ██║╚██╗ ██╔╝╚══██╔══╝██║  ██║██║████╗  ██║██╔════╝ 
+    ██╔████╔██║ ╚████╔╝ ██╔██╗ ██║█████╗  ██║ █╗ ██║  ██╔╝ ███████║██╔██╗ ██║ ╚████╔╝    ██║   ███████║██║██╔██╗ ██║██║  ███╗
+    ██║╚██╔╝██║  ╚██╔╝  ██║╚██╗██║██╔══╝  ██║███╗██║ ██╔╝  ██╔══██║██║╚██╗██║  ╚██╔╝     ██║   ██╔══██║██║██║╚██╗██║██║   ██║
+    ██║ ╚═╝ ██║   ██║██╗██║ ╚████║███████╗╚███╔███╔╝██╔╝   ██║  ██║██║ ╚████║   ██║      ██║   ██║  ██║██║██║ ╚████║╚██████╔╝
+    ╚═╝     ╚═╝   ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝ ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+    ██╗    ██╗    ██╗    ██╗  ██╗██╗███╗   ██╗██████╗  █████╗     ██╗      █████╗ ██████╗ ███████╗                           
+    ██║    ██║   ██╔╝    ██║ ██╔╝██║████╗  ██║██╔══██╗██╔══██╗    ██║     ██╔══██╗██╔══██╗██╔════╝                           
+    ██║ █╗ ██║  ██╔╝     █████╔╝ ██║██╔██╗ ██║██║  ██║███████║    ██║     ███████║██████╔╝███████╗                           
+    ██║███╗██║ ██╔╝      ██╔═██╗ ██║██║╚██╗██║██║  ██║██╔══██║    ██║     ██╔══██║██╔══██╗╚════██║                           
+    ╚███╔███╔╝██╔╝       ██║  ██╗██║██║ ╚████║██████╔╝██║  ██║    ███████╗██║  ██║██████╔╝███████║                           
+     ╚══╝╚══╝ ╚═╝        ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝                           
+    ███╗   ███╗ █████╗ ██████╗ ███████╗    ██╗███╗   ██╗    ███████╗███████╗ ██████╗ ██╗   ██╗██╗                            
+    ████╗ ████║██╔══██╗██╔══██╗██╔════╝    ██║████╗  ██║    ██╔════╝██╔════╝██╔═══██╗██║   ██║██║                            
+    ██╔████╔██║███████║██║  ██║█████╗      ██║██╔██╗ ██║    ███████╗█████╗  ██║   ██║██║   ██║██║                            
+    ██║╚██╔╝██║██╔══██║██║  ██║██╔══╝      ██║██║╚██╗██║    ╚════██║██╔══╝  ██║   ██║██║   ██║██║                            
+    ██║ ╚═╝ ██║██║  ██║██████╔╝███████╗    ██║██║ ╚████║    ███████║███████╗╚██████╔╝╚██████╔╝███████╗                       
+    ╚═╝     ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝    ╚═╝╚═╝  ╚═══╝    ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝                       
+                                                                                                                             
+    Kinda Labs is an archive of small & fun side projects.
+    This project is one of our trials which made by Sonu, Giri & Bin.
+    
+    -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 피드백 수집 툴 샘플 -->
+    <script defer src="https://feedback.fish/ff.js?pid=7540e1b055cb6a"></script>
+    <title>
+      Create | my.new - Create shortened URLs to perform tasks for you quicker.
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <a href="./create.html">
+          <div class="brand">
+            <img src="../images/logo.svg" alt="logo" /><span class="logo-title"
+              >my.new</span
+            >
+          </div>
+        </a>
+        <div class="navi">
+          <div class="navi-items">
+            <button data-feedback-fish class="item">Give us feedbacks</button>
+            <a
+              href="https://www.notion.so/mynew/my-new-Help-Desk-713e01a5486a470796df7675ce2df087"
+              class="item"
+              >Help</a
+            >
+            <a href="../index.html">
+              <div id="buttonSignOut" class="btn">
+                <img src="../images/img-bye.png" width="16" alt="" />
+                <span>Sign Out</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="page-body">
+        <!-- 이곳은 섹션 상단의 네비게이션과 검색창 노출 영역입니다. -->
+        
+        <section class="section list">
+          <div class="section-title">
+            <h2>App Shortcuts</h2>
+          </div>
+          <div class="section-body">
+            <div class="shortcuts">
+              <div class="list">
+                <div
+                  class="btn shortcut"
+                  onclick="togglePopup(popupAppShortcut)"
+                >
+                  <div class="info">
+                    <img
+                      src="./images/ico-app-gmail.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/gmail" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">gmail</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div class="btn shortcut">
+                  <div class="info">
+                    <img
+                      src="./images/ico-app-gcalendar.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/cal" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">cal</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div class="btn shortcut">
+                  <div class="info">
+                    <img
+                      src="./images/ico-app-figma.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/figma" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">figma</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div class="btn shortcut">
+                  <div class="info">
+                    <img
+                      src="./images/ico-app-github.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/github" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">github</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div class="btn create" onclick="togglePopup(popupCreate)">
+                  <img src="./images/ico-plus.svg" width="16" />
+                </div>
+              </div>
+              <div class="instruction">
+                <img src="./images/img-apps.svg" />
+                <p>
+                  There are no app shortcuts you added.<br />Let’s connect
+                  <a href="#" onclick="togglePopup(popupCreate)"
+                    >your favorite apps</a
+                  >
+                  now.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section list">
+          <div class="section-title">
+            <h2>Custom Shortcuts</h2>
+          </div>
+          <div class="section-body">
+            <div class="shortcuts">
+              <div class="list">
+                <div
+                  class="btn shortcut"
+                  onclick="togglePopup(popupCustomShortcut)"
+                >
+                  <div class="info">
+                    <img
+                      src="./images/ico-link.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/blog" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">blog</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div
+                  class="btn shortcut"
+                  onclick="togglePopup(popupCustomShortcut)"
+                >
+                  <div class="info">
+                    <img
+                      src="./images/ico-link.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/sixshop" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">sixshop</span>
+                      </div>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/ico-chevron-right.svg"
+                    width="14"
+                    class="chevron"
+                  />
+                </div>
+                <div
+                  class="btn create"
+                  onclick="togglePopup(popupCustomShortcut)"
+                >
+                  <img src="./images/ico-plus.svg" width="16" />
+                </div>
+              </div>
+              <div class="instruction">
+                <img src="./images/img-custom.svg" />
+                <p>
+                  There are no custom shortcuts you added.<br />Let’s make
+                  <a href="#" onclick="togglePopup(popupCreate)"
+                    >a new shortcut</a
+                  >
+                  to your destination.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section list">
+          <div class="section-title">
+            <h2>Group Shortcuts</h2>
+          </div>
+          <div class="section-body">
+            <div class="shortcuts">
+              <div class="list">
+                <div
+                  class="btn shortcut"
+                  onclick="togglePopup(popupGroupShortcut)"
+                >
+                  <div class="info">
+                    <img
+                      src="./images/ico-group.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/daily" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">daily</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div>
+                    <span class="count">10</span>
+                    <img
+                      src="./images/ico-chevron-right.svg"
+                      width="14"
+                      class="chevron"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="btn shortcut"
+                  onclick="togglePopup(popupGroupShortcut)"
+                >
+                  <div class="info">
+                    <img
+                      src="./images/ico-group.svg"
+                      width="24"
+                      height="24"
+                      class="icon"
+                    />
+                    <a href="https://my.new/work" target="_blank">
+                      <div>
+                        my.new/
+                        <span class="keyword">work</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div>
+                    <span class="count">8</span>
+                    <img
+                      src="./images/ico-chevron-right.svg"
+                      width="14"
+                      class="chevron"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="btn create"
+                  onclick="togglePopup(popupGroupShortcut)"
+                >
+                  <img src="./images/ico-plus.svg" width="16" />
+                </div>
+              </div>
+              <div class="instruction">
+                <img src="./images/img-group.svg" width="48" />
+                <p>
+                  There are no group shortcuts you added.<br />Let’s make
+                  <a href="#" onclick="togglePopup(popupCreate)"
+                    >a new shortcut</a
+                  >
+                  to open multiple sites at once.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+     
+      <!-- 숏컷 추가하기 팝업 -->
+      <div id="popupCreate" class="popup-overlay">
+        <div class="modal-popup">
+          <div class="popup-header">
+            <div>
+              <img src="../images/img-connect.png" width="20" />
+              &nbsp;Apps
+            </div>
+            <div class="btn close" onclick="togglePopup(popupCreate)">
+              <img src="../images/ico-close.svg" width="16" />
+            </div>
+          </div>
+          <div class="popup-body">
+            <!-- 앱 카테고리 필터 -->
+            <div class="app-category">
+              <div class="input-search">
+                <img src="./images/ico-search.svg" width="16" height="16" />
+                <input type="text" placeholder="Search apps..." />
+              </div>
+              <form name="appListCategoryItems" class="btn-group">
+                <input
+                  id="categoryAll"
+                  type="radio"
+                  value="all"
+                  name="appListCatrgory"
+                  checked
+                />
+                <label for="categoryAll"> All </label>
+                <input
+                  id="categoryProduction"
+                  type="radio"
+                  value="all"
+                  name="appListCatrgory"
+                />
+                <label for="categoryProduction"> Production </label>
+                <input
+                  id="categoryCommunication"
+                  type="radio"
+                  value="all"
+                  name="appListCatrgory"
+                />
+                <label for="categoryCommunication"> Communication </label>
+                <input
+                  id="categoryManagement"
+                  type="radio"
+                  value="development"
+                  name="appListCatrgory"
+                />
+                <label for="categoryManagement"> Management </label>
+                <input
+                  id="categoryDocumentation"
+                  type="radio"
+                  value="design"
+                  name="appListCatrgory"
+                />
+                <label for="categoryDocumentation"> Documentation </label>
+                <input
+                  id="categoryPresentation"
+                  type="radio"
+                  value="pm"
+                  name="appListCatrgory"
+                />
+                <label for="categoryPresentation"> Presentation </label>
+                <input
+                  id="categoryHandyTools"
+                  type="radio"
+                  value="marketing"
+                  name="appListCatrgory"
+                />
+                <label for="categoryHandyTools"> Handy Tools </label>
+              </form>
+            </div>
+            <div class="app-list">
+              <!-- 커스텀 숏컷 -->
+              <div
+                class="btn app custom"
+                onclick="togglePopup(popupCustomShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-link.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Custom Shortcut</div>
+                </div>
+              </div>
+              <!-- 그룹 숏컷 -->
+              <div
+                class="btn app group"
+                onclick="togglePopup(popupGroupShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-group.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Group Shortcut</div>
+                </div>
+              </div>
+              <!-- 앱 숏컷 목록 -->
+              <div
+                class="btn app is-connected"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gmail.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Gmail</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app is-connected"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gcalendar.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Calendar</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gdocs.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Docs</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gsheet.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Sheets</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-meet.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Meet</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gslide.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Slides</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-gform.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google form</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-keep.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Keep</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-apps-script.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Google Apps Script</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-zoom.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Zoom</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-notion.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Notion</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app is-connected"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-figma.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Figma</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app is-connected"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-github.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Github</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-bitly.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Bitly</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-miro.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Miro</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-msword.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">MS Word</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-msexcel.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">MS Excel</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-mspowerpoint.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">MS PowerPoint</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-msteams.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">MS Teams</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-mssway.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">MS Sway</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-codepen.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">CodePen</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn app"
+                onclick="togglePopup(popupAppShortcut, popupCreate)"
+              >
+                <div class="icon">
+                  <img src="../images/ico-app-codesandbox.svg" width="42" />
+                </div>
+                <div class="info">
+                  <div class="name">Code Sandbox</div>
+                  <div class="status">Is connected</div>
+                  <div class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="popupAppShortcut" class="popup-overlay">
+        <div class="modal-popup">
+          <div class="popup-header">
+            <div class="navi">
+              <div
+                class="btn back"
+                onclick="togglePopup(popupCreate, popupAppShortcut)"
+              >
+                <img
+                  src="../images/ico-chevron-left.svg"
+                  alt="close"
+                  height="16"
+                />
+              </div>
+              Connect App
+            </div>
+            <div class="btn close" onclick="togglePopup(popupAppShortcut)">
+              <img src="../images/ico-close.svg" alt="close" width="16" />
+            </div>
+          </div>
+          <div class="popup-body">
+            <div class="content-header">
+              <div class="icon">
+                <img src="../images/ico-app-gmail.svg" width="60" />
+              </div>
+              <div class="info">
+                <div class="name">
+                  Gmail
+                  <span class="checked">
+                    <svg
+                      viewBox="0 0 32 24"
+                      width="10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="description">
+                  One of the most popular email services, Gmail keeps track of
+                  all your emails with threaded conversations, tags, and
+                  Google-powered search to find any message you need.
+                </div>
+                <div class="link">
+                  <a href="https://www.gmail.com">https://www.gmail.com</a>
+                </div>
+                <div class="connectivity">
+                  <div class="btn connect primary" onclick="connectApp(event)">
+                    Connect App
+                  </div>
+                  <div class="btn cancel" onclick="disconnectApp(event)">
+                    Disconnect App
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-body">
+              <div class="list">
+                <h3>Commands</h3>
+                <div class="callout">
+                  👉 If you connect this app, You can access the commands below.
+                </div>
+                <div class="items">
+                  <div class="shortcut item">
+                    <div class="label"><span>1</span>Open Gmail</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail" target="_blank"
+                        >https://my.new/gmail</a
+                      >
+                      <div class="btn edit" onclick="editKeyword()">
+                        <img
+                          src="./images/ico-pencil.svg"
+                          width="16"
+                          height="16"
+                        />
+                      </div>
+                    </div>
+                    <div class="command input">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <p>https://my.new/</p>
+                      <input type="text" value="gmail" />
+                      <div class="btn primary save" onclick="saveKeyword()">
+                        <svg
+                          viewBox="0 0 32 24"
+                          width="16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.8686 23.5286L0.46861 13.0688C-0.156203 12.4404 -0.156203 11.4215 0.46861 10.7931L2.7313 8.51731C3.35611 7.88884 4.36924 7.88884 4.99405 8.51731L12 15.5635L27.0059 0.471304C27.6308 -0.157101 28.6439 -0.157101 29.2687 0.471304L31.5314 2.74707C32.1562 3.37547 32.1562 4.39436 31.5314 5.02283L13.1314 23.5287C12.5065 24.1571 11.4934 24.1571 10.8686 23.5286Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>2</span>Compose a New Email</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/new" target="_blank"
+                        >https://my.new/gmail/new</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>3</span>View All Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/all" target="_blank"
+                        >https://my.new/gmail/all</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>4</span>View Starred Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/starred" target="_blank"
+                        >https://my.new/gmail/starred</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>5</span>View Snoozed Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/snoozed" target="_blank"
+                        >https://my.new/gmail/snoozed</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>6</span>View Important Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/important" target="_blank"
+                        >https://my.new/gmail/important</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>7</span>View Sent Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/sent" target="_blank"
+                        >https://my.new/gmail/sent</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>8</span>View Scheduled Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/scheduled" target="_blank"
+                        >https://my.new/gmail/scheduled</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>9</span>View Spam Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/spam" target="_blank"
+                        >https://my.new/gmail/spam</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>10</span>View Trash</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/trash" target="_blank"
+                        >https://my.new/gmail/trash</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>11</span>View Social Category</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/social" target="_blank"
+                        >https://my.new/gmail/social</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <span>12</span>View Updates Category
+                    </div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/updates" target="_blank"
+                        >https://my.new/gmail/updates</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>12</span>View Forums Category</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/forums" target="_blank"
+                        >https://my.new/gmail/forums</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <span>13</span>View Promotions Category
+                    </div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/promotions" target="_blank"
+                        >https://my.new/gmail/promotions</a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>14</span>View Emails by Label</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/label/test" target="_blank"
+                        >https://my.new/gmail/label/<code>label name</code></a
+                      >
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="label"><span>15</span>Search Emails</div>
+                    <div class="command read">
+                      <img src="./images/logo.svg" width="14" height="14" />
+                      <a href="https://my.new/gmail/search/test" target="_blank"
+                        >https://my.new/gmail/search/<code
+                          >search keyword</code
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="popupCustomShortcut" class="popup-overlay create">
+        <div class="modal-popup">
+          <div class="popup-header">
+            <div class="navi">
+              <div
+                class="btn back"
+                onclick="togglePopup(popupCreate, popupCustomShortcut)"
+              >
+                <img
+                  src="../images/ico-chevron-left.svg"
+                  alt="close"
+                  height="16"
+                />
+              </div>
+              Custom Shortcut
+            </div>
+            <div class="btn close" onclick="togglePopup(popupCustomShortcut)">
+              <img src="../images/ico-close.svg" alt="close" width="16" />
+            </div>
+          </div>
+          <div class="popup-body">
+            <div class="content-header">
+              <div class="icon">
+                <img src="../images/ico-link.svg" width="60" />
+              </div>
+              <div class="info">
+                <div class="name">New Custom Shortcut</div>
+                <div class="description">
+                  Entering the keyword like 'ooo' below will generate a shorten
+                  URL 'my.new/ooo'. Through the URL, you can go directly to the
+                  destination.
+                </div>
+              </div>
+            </div>
+            <div class="content-body">
+              <div class="list">
+                <div class="shortcut item">
+                  <div class="label"><span>A</span>Shortcut Keyword</div>
+                  <div class="command input">
+                    <img src="./images/logo.svg" width="14" height="14" />
+                    <p>https://my.new/</p>
+                    <input type="text" placeholder="ex) google" />
+                  </div>
+                </div>
+                <div class="destination item">
+                  <div class="label"><span>B</span>Destination</div>
+                  <form action="submit">
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://www.google.com"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-footer">
+            <div class="btns">
+              <div class="btn create primary">Create New</div>
+              <div class="btn edit primary">Save Changes</div>
+              <div class="btn delete cancel">
+                <img src="./images/ico-trash.svg" width="16" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="popupGroupShortcut" class="popup-overlay create">
+        <div class="modal-popup">
+          <div class="popup-header">
+            <div class="navi">
+              <div
+                class="btn back"
+                onclick="togglePopup(popupCreate, popupGroupShortcut)"
+              >
+                <img
+                  src="../images/ico-chevron-left.svg"
+                  alt="close"
+                  height="16"
+                />
+              </div>
+              Group Shortcut
+            </div>
+            <div class="btn close" onclick="togglePopup(popupGroupShortcut)">
+              <img src="../images/ico-close.svg" alt="close" width="16" />
+            </div>
+          </div>
+          <div class="popup-body">
+            <div class="content-header">
+              <div class="icon">
+                <img src="../images/ico-group.svg" width="60" />
+              </div>
+              <div class="info">
+                <div class="name">New Group Shortcut</div>
+                <div class="description">
+                  Entering the keyword like 'ooo' below will generate a shorten
+                  URL 'my.new/ooo'. Through the URL, you can go directly to
+                  multiple destinations at once.
+                </div>
+              </div>
+            </div>
+            <div class="content-body">
+              <div class="list">
+                <div class="shortcut item">
+                  <div class="label"><span>A</span>Shortcut Keyword</div>
+                  <div class="command input">
+                    <img src="./images/logo.svg" width="14" height="14" />
+                    <p>https://my.new/</p>
+                    <input type="text" placeholder="ex) news" />
+                  </div>
+                </div>
+                <div class="destination item">
+                  <div class="label"><span>B</span>Destinations</div>
+                  <form action="submit">
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://producthunt.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://techcrunch.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://news.ycombinator.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://thenextweb.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://venturebeat.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://www.wired.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://mashable.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://theinformation.com"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://fortune.com/tag/term-sheet"
+                      />
+                    </div>
+                    <div class="input">
+                      <input
+                        type="text"
+                        placeholder="ex) https://gizmodo.com"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-footer">
+            <div class="btns">
+              <div class="btn create primary">Create New</div>
+              <div class="btn edit primary">Save Changes</div>
+              <div class="btn delete cancel">
+                <img src="./images/ico-trash.svg" width="16" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function togglePopup(target, current) {
+        let body = document.querySelector("body");
+        let wasPopupOpened = target.classList.contains("is-active");
+
+        // 팝업창이 오픈되어 있었는지 확인하여 body쪽 스크롤 출력 여부 결정
+        if (wasPopupOpened) {
+          body.classList.remove("no-overflow");
+        } else {
+          body.classList.add("no-overflow");
+        }
+
+        target.classList.toggle("is-active");
+        if (current) {
+          current.classList.remove("is-active");
+        } else {
+          return;
+        }
+      }
+      function connectApp(e) {
+        let target = document.querySelector("#popupAppShortcut");
+        let button = e.target;
+
+        button.classList.add("load");
+        setTimeout(function () {
+          button.classList.remove("load");
+          target.classList.add("is-connected");
+        }, 2000);
+      }
+      function disconnectApp(e) {
+        let target = document.querySelector("#popupAppShortcut");
+        let button = e.target;
+
+        button.classList.add("load");
+        saveKeyword(e);
+        setTimeout(function () {
+          button.classList.remove("load");
+          target.classList.remove("is-connected");
+        }, 2000);
+      }
+      function editKeyword() {
+        let item = document.querySelector("#popupAppShortcut .shortcut.item");
+        let input = document.querySelector(
+          "#popupAppShortcut .shortcut.item .input input"
+        );
+
+        item.classList.add("is-active");
+        input.focus();
+        input.selectionStart = input.selectionEnd = input.value.length;
+      }
+      function saveKeyword() {
+        let item = document.querySelector("#popupAppShortcut .shortcut.item");
+
+        item.classList.remove("is-active");
+      }
+    </script>
+  </body>
+</html>
