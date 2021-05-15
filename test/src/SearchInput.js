@@ -6,6 +6,7 @@ class SearchInput {
     this.$searchInput = $searchInput;
     this.$searchInput.placeholder = "고양이를 검색해보세요.|";
 
+    console.log($target);
     $searchInput.className = "SearchInput";
     $target.appendChild($searchInput);
 
