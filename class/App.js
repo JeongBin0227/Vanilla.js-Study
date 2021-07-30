@@ -40,3 +40,21 @@ class App {
     this.searchResult.setState(nextData);
   }
 }
+
+var convertData = {
+  buyNowCartNo: ""
+  customerAddress: "06000,서울 강남구 강남대로 708 (압구정동&nbsp; 한남대교레인보우카폐),123123"
+  customerBirthDate: "1998,04,05"
+  customerEmail: "ZHNhZGFzYUBuYXZlci5jb20="
+  customerId: "c2Rhc2Q="
+  customerName: "Admin"
+  customerPassword: "YXNkMTIz"
+  customerPhone: "010,3123,1561"
+  customerRecommender: "dddd"
+  customerSex: "01"
+  marketingAgreement: true
+  memberNo: "1"
+  orderType: ""
+  
+
+}
