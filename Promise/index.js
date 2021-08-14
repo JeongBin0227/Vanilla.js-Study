@@ -61,3 +61,9 @@ p(1000).then((ms) => {
   console.log(`${ms} ms 후에 실행됩니다.`);
 });
 
+//Promise 객체를 리턴하는 함수를 await 로 호출하는 방법
+(async function main() {
+  const ms = await p(1000);
+  console.log(`${ms} ms 후에 실행됩니다.`);
+})();
+
