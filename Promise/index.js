@@ -102,3 +102,8 @@ async function main() {
 }
 
 //promise.race
+async function main() {
+  const result = await Promise.race([p(1000), p(2000), p(3000)]);
+
+  console.log(result);
+}
