@@ -55,3 +55,9 @@ function p(ms) {
     });
   });
 }
+
+// Promise 객체를 이용해서 비동기 로직을 수행할 때
+p(1000).then((ms) => {
+  console.log(`${ms} ms 후에 실행됩니다.`);
+});
+
