@@ -44,3 +44,14 @@
 //   });
 // });
 
+// Promise 객체를 리턴하는 함수
+function p(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      setTimeout(() => {
+        // resolve(ms);
+        reject(new Error("reason"));
+      }, ms);
+    });
+  });
+}
