@@ -67,3 +67,12 @@ p(1000).then((ms) => {
   console.log(`${ms} ms 후에 실행됩니다.`);
 })();
 
+//try catch 이용하여 reject 처리
+(async function main2() {
+  try {
+    const ms = await p(1000);
+    console.log(`${ms} ms 후에 실행됩니다.`);
+  } catch (error) {
+    console.log(error);
+  }
+})();
