@@ -76,3 +76,20 @@ p(1000).then((ms) => {
     console.log(error);
   }
 })();
+
+//연속된 처리
+
+p(1000).then(() =>
+  p(1000).then(() =>
+    p(1000).then(() => {
+      console.log("3000ms 후에 실행");
+    })
+  )
+);
+
+async function main() {
+  await p(1000);
+  await p(1000);
+  await p(1000);
+  console.log("3000ms 후에 실행");
+}
