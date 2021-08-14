@@ -93,3 +93,12 @@ async function main() {
   await p(1000);
   console.log("3000ms 후에 실행");
 }
+
+//promise.all
+async function main() {
+  const result = await Promise.all([p(1000), p(2000), p(3000)]);
+
+  console.log(result);
+}
+
+//promise.race
