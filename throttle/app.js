@@ -1,4 +1,5 @@
 const button = document.getElementById("button");
+const input = document.getElementById("input");
 const throttle = (fn, delay) => {
   let last = 0;
   return () => {
@@ -16,3 +17,14 @@ button.addEventListener(
     console.log("clicked!");
   }, 2000)
 );
+
+let timer;
+input.addEventListener("input", function (e) {
+  console.log(e.target.value);
+  if (!timer) {
+    timer = setTimeout(function () {
+      timer = null;
+      console.log("여기에 ajax 요청", e.target.value);
+    }, 5000);
+  }
+});
